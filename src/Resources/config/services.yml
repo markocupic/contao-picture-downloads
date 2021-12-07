@@ -1,0 +1,11 @@
+services:
+  _defaults:
+    autowire: true
+    autoconfigure: true
+    public: true
+    bind:
+      $pictureSize: '%markocupic_contao_picture_downloads.picture_size%'
+
+  Markocupic\ContaoPictureDownloads\:
+    resource: ../../
+    exclude: ../../{DependencyInjection,Resources}
