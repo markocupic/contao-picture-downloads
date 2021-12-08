@@ -33,5 +33,5 @@ Simply open a new contao downloads content element.
 &nbsp;
 
 ---
-This extension has been sponsored by [Kreadea](https://https://www.kreadea.de), Wiesbaden Germany
+This extension has been sponsored by [Kreadea](https://www.kreadea.de), Wiesbaden Germany
 <p align="left"><img src="docs/kreadea.png" width="150"></p>
