@@ -3,10 +3,9 @@
 <?php $this->block('content'); ?>
   <ul class="download-picture-list">
     <?php foreach ($this->files as $file): ?>
-    <?php if($file['isImage']): ?>
+    <?php if ($file['isImage']): ?>
         <li class="download-picture-element">
           <a href="<?= $file['href'] ?>" title="<?= $file['title'] ?>" type="<?= $file['mime'] ?>" download>
-            <!-- See https://docs.contao.org/manual/en/article-management/insert-tags/ -->
             {{picture::<?= $file['stringUuid'] ?>?size=<?= $this->pictureSize ?>&alt=<?= $file['meta']['alt'] ?>}}
           </a>
         </li>
