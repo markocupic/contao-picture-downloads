@@ -49,5 +49,5 @@
     "extra": {
         "contao-manager-plugin": "Markocupic\\ContaoPictureDownloads\\ContaoManager\\Plugin"
     },
-    "version": "1.0"
+    "version": "1.1"
 }
