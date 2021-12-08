@@ -10,7 +10,7 @@ This Contao content element extends the Contao core content element "ce_download
 ## Installation
 `composer require markocupic/contao-picture-download`
 
-Set the default Contao picture size in your `config/config.yml`. This will be used in the template to generate the thumbnails.
+Set the default Contao picture size in `config/config.yml`. This will be used to generate the thumbnails.
 ```
 # config/config.yml
 markocupic_contao_picture_downloads:
@@ -27,5 +27,3 @@ Simply open a new contao downloads content element.
 
 
 This extension has been sponsored by [Kreadea](https://https://www.kreadea.de), Wiesbaden Germany
-
-![kreadea](docs/kreadea.png)
