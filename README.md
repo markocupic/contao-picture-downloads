@@ -1,4 +1,4 @@
-<p align="center"><img src="docs/logo.png" width="200"></p>
+<p align="center"><a href="https://github.com/markocupic"><img src="docs/logo.png" width="200"></a></p>
 
 # Contao picture downloads for Contao CMS
 
@@ -34,4 +34,4 @@ Simply open a new contao downloads content element.
 
 ---
 This extension has been sponsored by [Kreadea](https://www.kreadea.de), Wiesbaden Germany
-<p align="left"><img src="docs/kreadea.png" width="150"></p>
+<p align="left"><a href="https://www.kreadea.de" title="KREADEA"><img src="docs/kreadea.png" width="150"></a></p>
