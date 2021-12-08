@@ -10,6 +10,7 @@ This Contao content element extends the Contao core content element "ce_download
 
 ## Installation
 
+To install the extension you should run:
 ```bash
 composer require markocupic/contao-picture-download
 ```
@@ -17,11 +18,10 @@ composer require markocupic/contao-picture-download
 Set the default Contao picture size in `config/config.yml`.
  This will be used to generate the thumbnails.
 
-```bash
+```yaml
 # config/config.yml
 markocupic_contao_picture_downloads:
   picture_size: 3
-
 ```
 
 Clear and warmup the cache with:
