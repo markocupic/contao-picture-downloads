@@ -2,20 +2,20 @@
 
 # Contao picture download/downloads for Contao CMS
 
-This Contao content element extends the Contao core content elements "ce_download" and "ce_downloads".
- Display a thumbnail instead of the
- filename if you like to serve images as download items.
+This Plugin extends the Contao Core content elements **Download** (ce_download) and **Downloads** (ce_downloads).
+ The extension allows you to display a thumbnail instead of the
+ filename if you like to offer one or more images as download items.
 
 ![Contao Picture Downloads](docs/screenshot.png)
 
 ## Installation
 
-To install the extension you should run:
+Execute the following command to install the extension:
 ```bash
 composer require markocupic/contao-picture-download
 ```
 
-Set the default Contao picture size for the ce_download and ce_downloads element in `config/config.yml`.
+Afterwards you have to set the picture size (id) for the **ce_download** and **ce_downloads** element in `config/config.yml`.
  This will be used to generate the thumbnails.
 
 ```yaml
@@ -25,16 +25,17 @@ markocupic_contao_picture_downloads:
  ce_download_picture_size: 2
 ```
 
-Clear and warmup the cache with:
+If you habe done, clear and warmup the cache with:
 ```bash
  vendor/bin/contao-console cache:warmup
 ```
 
 ## Usage
 
-Simply open a new Contao Core **download** or **downloads* content element.
- Select one or more pictures that you want to offer for download from the Contao
- filesystem and choose the "ce_download_picture" or "ce_downloads_picture" template.
+- Go to the Contao backend and simply create a new Contao Core **download** or **downloads** content element.
+- Select one or more pictures that you want to offer for download from the Contao filesystem.
+- Choose the "ce_download_picture" or "ce_downloads_picture" template.
+- Save and check your settings in the frontend.
 
 &nbsp;
 
