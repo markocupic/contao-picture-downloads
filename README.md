@@ -32,9 +32,9 @@ Clear and warmup the cache with:
 
 ## Usage
 
-Simply open a new contao download or downloads content element.
- Select some pictures that you want to serve for download from the
- filesystem and choose the "ce_downloads_picture" template.
+Simply open a new Contao Core **download** or **downloads* content element.
+ Select one or more pictures that you want to offer for download from the Contao
+ filesystem and choose the "ce_download_picture" or "ce_downloads_picture" template.
 
 &nbsp;
 
