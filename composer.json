@@ -1,11 +1,12 @@
 {
     "name": "markocupic/contao-picture-downloads",
-    "description": "contao picture downloads",
+    "description": "Extends the Contao Core 'downloads' and 'download' frontend elements with a picture download element.",
     "keywords": [
-        "contao",
+        "Contao CMS",
         "bundle",
         "picture",
-        "downloads"
+        "ce_downloads",
+        "ce_download"
     ],
     "type": "contao-bundle",
     "license": "GPL-3.0-or-later",
@@ -49,5 +50,5 @@
     "extra": {
         "contao-manager-plugin": "Markocupic\\ContaoPictureDownloads\\ContaoManager\\Plugin"
     },
-    "version": "1.1"
+    "version": "1.2"
 }

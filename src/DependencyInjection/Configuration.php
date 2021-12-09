@@ -27,7 +27,10 @@ class Configuration implements ConfigurationInterface
 
         $treeBuilder->getRootNode()
             ->children()
-                ->integerNode('picture_size')
+                ->integerNode('ce_download_picture_size')
+                ->defaultValue(1)
+                ->end()
+                ->integerNode('ce_downloads_picture_size')
                 ->defaultValue(1)
                 ->end()
             ->end()

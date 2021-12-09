@@ -14,7 +14,6 @@ declare(strict_types=1);
 
 namespace Markocupic\ContaoPictureDownloads\Listener\ContaoHooks;
 
-use Contao\CalendarEventsModel;
 use Contao\CoreBundle\Framework\ContaoFramework;
 use Contao\CoreBundle\ServiceAnnotation\Hook;
 use Contao\Template;
@@ -38,22 +37,29 @@ final class ParseTemplateListener
      */
     private $addTemplateData;
 
+    /**
+     * @param ContaoFramework $framework
+     * @param AddTemplateData $addTemplateData
+     */
     public function __construct(ContaoFramework $framework, AddTemplateData $addTemplateData)
     {
         $this->framework = $framework;
         $this->addTemplateData = $addTemplateData;
     }
 
+
+
     /**
-     * Add registration data to calendar templates.
+     * Augment ce_download and ce_downloads template object with more properties.
+     *
+     * @param Template $template
+     * @return void
+     * @throws \Exception
      */
     public function __invoke(Template $template): void
     {
-
-        if (0 !== strpos($template->getName(), 'ce_downloads')) {
-            return;
+        if (0 === strpos($template->getName(), 'ce_downloads') || 0 === strpos($template->getName(), 'ce_download')) {
+            $this->addTemplateData->add($template);
         }
-
-        $this->addTemplateData->add($template);
     }
 }

@@ -14,19 +14,50 @@ declare(strict_types=1);
 
 namespace Markocupic\ContaoPictureDownloads;
 
+use Contao\CoreBundle\Routing\ScopeMatcher;
 use Contao\File;
 use Contao\FilesModel;
+use Contao\Frontend;
+use Contao\PageModel;
+use Contao\System;
+use Symfony\Component\HttpFoundation\RequestStack;
 
 class PictureDownload
 {
-    public function __construct()
+    private $requestStack;
+    private $scopeMatcher;
+
+    public function __construct(RequestStack $requestStack, ScopeMatcher $scopeMatcher)
     {
+        $this->requestStack = $requestStack;
+        $this->scopeMatcher = $scopeMatcher;
     }
 
-    public function isImage(FilesModel $objFile): bool
-    {
-        $file = new File($objFile->path);
 
-        return $file->isImage;
+
+
+    public function getMetaData(FilesModel $objFiles)
+    {
+
+        $request = $this->requestStack->getCurrentRequest();
+
+        if ($request && $this->scopeMatcher->isBackendRequest($request))
+        {
+            $arrMeta = Frontend::getMetaData($objFiles->meta, $GLOBALS['TL_LANGUAGE']);
+        }
+        else
+        {
+            /** @var PageModel $objPage */
+            global $objPage;
+
+            $arrMeta = Frontend::getMetaData($objFiles->meta, $objPage->language);
+
+            if (empty($arrMeta) && $objPage->rootFallbackLanguage !== null)
+            {
+                $arrMeta = Frontend::getMetaData($objFiles->meta, $objPage->rootFallbackLanguage);
+            }
+        }
+
+        return $arrMeta ?? [];
     }
 }

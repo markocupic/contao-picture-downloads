@@ -50,6 +50,8 @@ class MarkocupicContaoPictureDownloadsExtension extends Extension
 
         $rootKey = $this->getAlias();
 
-        $container->setParameter($rootKey.'.picture_size', $config['picture_size']);
+        $container->setParameter($rootKey.'.ce_download_picture_size', $config['ce_download_picture_size']);
+        $container->setParameter($rootKey.'.ce_downloads_picture_size', $config['ce_downloads_picture_size']);
+
     }
 }

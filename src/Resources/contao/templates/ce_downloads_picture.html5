@@ -1,10 +1,10 @@
 <?php $this->extend('block_searchable'); ?>
 
 <?php $this->block('content'); ?>
-  <ul class="download-picture-list">
+  <ul class="downloads-picture-list">
     <?php foreach ($this->files as $file): ?>
     <?php if ($file['isImage']): ?>
-        <li class="download-picture-element">
+        <li class="downloads-picture-element">
           <a href="<?= $file['href'] ?>" title="<?= $file['title'] ?>" type="<?= $file['mime'] ?>" download>
             {{picture::<?= $file['stringUuid'] ?>?size=<?= $this->pictureSize ?>&alt=<?= $file['meta']['alt'] ?>}}
           </a>

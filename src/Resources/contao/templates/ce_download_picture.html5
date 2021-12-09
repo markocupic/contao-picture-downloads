@@ -1,0 +1,16 @@
+<?php $this->extend('block_searchable'); ?>
+
+<?php $this->block('content'); ?>
+<p class="download-element ext-<?= $this->extension ?>">
+  <?php if ($this->isImage): ?>
+  <div class="download-picture-element">
+    <a href="<?= $this->href ?>" title="<?= $this->title ?>" type="<?= $this->mime ?>" data-link="<?= htmlspecialchars($this->link) ?>" data-size="<?= htmlspecialchars($this->filesize) ?>">
+      {{picture::<?= $this->stringUuid ?>?size=<?= $this->pictureSize ?>&alt=<?= $this->origMeta['alt'] ?>}}
+    </a>
+  </div>
+  <?php else: ?>
+  <a href="<?= $this->href ?>" title="<?= $this->title ?>" type="<?= $this->mime ?>"><?= $this->link ?> <span class="size">(<?= $this->filesize ?>)</span></a>
+  <?php endif; ?>
+</p>
+
+<?php $this->endblock(); ?>

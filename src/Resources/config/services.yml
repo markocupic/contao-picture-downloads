@@ -1,11 +1,13 @@
 services:
-  _defaults:
-    autowire: true
-    autoconfigure: true
-    public: true
-    bind:
-      $pictureSize: '%markocupic_contao_picture_downloads.picture_size%'
+    _defaults:
+        autowire: true
+        autoconfigure: true
+        public: true
+        bind:
+            $projectDir: '%kernel.project_dir%'
+            $ceDownloadPictureSize: '%markocupic_contao_picture_downloads.ce_download_picture_size%'
+            $ceDownloadsPictureSize: '%markocupic_contao_picture_downloads.ce_downloads_picture_size%'
 
-  Markocupic\ContaoPictureDownloads\:
-    resource: ../../
-    exclude: ../../{DependencyInjection,Resources}
+    Markocupic\ContaoPictureDownloads\:
+        resource: ../../
+        exclude: ../../{DependencyInjection,Resources}
