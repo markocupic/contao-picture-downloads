@@ -25,15 +25,15 @@ markocupic_contao_picture_downloads:
  ce_download_picture_size: 2
 ```
 
-If you habe done, clear and warmup the cache with:
+If you have done, clear and warmup the cache with:
 ```bash
  vendor/bin/contao-console cache:warmup
 ```
 
 ## Usage
 
-- Go to the Contao backend and simply create a new Contao Core **download** or **downloads** content element.
-- Select one or more pictures that you want to offer for download from the Contao filesystem.
+- Go to the Contao Backend and simply create a new Contao Core **download** or **downloads** content element.
+- Select one or more pictures that you want to offer for download from the Contao Filesystem.
 - Choose the "ce_download_picture" or "ce_downloads_picture" template.
 - Save and check your settings in the frontend.
 
